@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <link href="./css/default.css" rel="stylesheet">
+  <link href="./css/sql_for_erogamer.css" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <style type="text/css">
+    #povlist {
+      margin-bottom: 0.1em;
+    }
+  </style>
+  <title>SQL実行フォーム -エロゲーマーのためのSQL-</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N807LY4BBM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N807LY4BBM');
+  </script>
+</head>
+
+<body>
+
+  <!-- container　ここから -->
+  <div id="container">
+
+    <!-- heder　ここから -->
+    <div id="header">
+
+      <div id="title">
+        <div id="title_header">
+          <h1><a href="sql_for_erogamer_index.php">エロゲーマーのためのSQL</a></h1>
+        </div>
+      </div>
+
+    </div>
+    <!-- heder　ここまで --><!-- main　ここから -->
+    <div id="main">
+      <div id="main_header">
+        <h2>SQL実行フォーム</h2>
+      </div>
+      <div id="topic_path" class="topic_path" style="margin-top:15px; margin-bottom:15px;">
+        <a href="sql_for_erogamer_index.php">トップページ</a> → SQL実行フォーム
+      </div>
+      <div id="main_main">
+
+        <!-- form ここから -->
+        <div id="form">
+          <div id="form_header">
+            <h3>SQL実行フォーム</h3>
+          </div>
+          <div id="form_main">
+            <form action="/~ap2/ero/toukei_kaiseki/sql_for_erogamer_form.php" method="post">
+              <div id="sql"><textarea name="sql" rows="30" cols="150">SELECT *
+                  FROM brandlist
+                  WHERE id = 1
+                </textarea>
+              </div>
+              <div id="submit"><input type="submit" value="実行" /></div>
+            </form>
+          </div>
+        </div>
+        <!-- form ここまで -->
+
+        <div id="queryplan" class="bottom-margin">
+          <div id="queryplan_header">
+            <h3>QUERY PLAN</h3>
+          </div>
+          <div id="queryplan_main">
+            <pre>
+              Index Scan using brandlist_pkey on brandlist (cost=0.28..8.30 rows=1 width=371)<br />
+              Index Cond: (id = 1)<br />
+            </pre>
+          </div>
+        </div>
+        <div id="query_result" class="bottom-margin">
+          <div id="query_result_header">
+            <h3>SQLの実行結果</h3>
+          </div>
+          <div id="query_result_main">
+            <table>
+              <tr>
+                <th>id</th>
+                <th>brandname</th>
+                <th>brandfurigana</th>
+                <th>makername</th>
+                <th>makerfurigana</th>
+                <th>url</th>
+                <th>checked</th>
+                <th>kind</th>
+                <th>lost</th>
+                <th>directlink</th>
+                <th>median</th>
+                <th>http_response_code</th>
+                <th>twitter</th>
+                <th>twitter_data_widget_id</th>
+                <th>notes</th>
+                <th>erogetrailers</th>
+                <th>cien</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>&acirc;ge(age)</td>
+                <td>アージュ</td>
+                <td>アージュ</td>
+                <td>アージュ</td>
+                <td>https://age-soft.com/main/</td>
+                <td></td>
+                <td>CORPORATION</td>
+                <td>f</td>
+                <td>t</td>
+                <td>81</td>
+                <td>200</td>
+                <td>age_soft</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- main　ここまで -->
+
+    <!-- footer　ここから -->
+    <div id="footer">
+
+      <hr />
+      <!-- site_infomation　ここから -->
+      <div id="site_infomation">
+        <address>
+          ひろいん<br />
+          egamescape &#64; gmail.com
+        </address>
+      </div>
+      <!-- site_infomation　ここまで -->
+
+    </div>
+    <!-- footer　ここまで -->
+
+  </div>
+  <!-- container　ここまで -->
+
+</body>
+
+</html>

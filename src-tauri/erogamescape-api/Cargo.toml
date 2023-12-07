@@ -1,0 +1,17 @@
+[package]
+name = "erogamescape-api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = "0.11.20"
+scraper = "0.17.1"
+serde = "1.0.188"
+thiserror = "1.0.48"
+tracing = "0.1"
+
+[dev-dependencies]
+serde = { version = "1.0.188", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
